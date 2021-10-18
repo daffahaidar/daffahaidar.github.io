@@ -8,4 +8,4 @@
   <li> Main page animation does not run smoothly on some devices. </li>
 </ul>
 
-# if you want to contribute to fixing some of these bugs, I'm happy to open and welcome to fork this repository
+# if you want to contribute to fixing some of these bugs, I'm happy to open and welcome to pull request this repository
