@@ -1,0 +1,829 @@
+/* Google Font Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: dodgerblue;
+  --black-color: #0e2431;
+  --white-color: #fff;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-image: url("../img/texture.png");
+}
+/* Custom Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Navbar Styling */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+nav.sticky {
+  background: var(--primary-color);
+  padding: 13px 0;
+}
+nav .navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .label a {
+  font-weight: 500;
+  font-size: 35px;
+  color: var(--primary-color);
+}
+
+nav.sticky .navbar .label a {
+  color: var(--white-color);
+}
+
+/*Server Time*/
+
+nav .navbar .stime {
+  width: 130px;
+  text-align: right;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--black-color);
+}
+
+nav.sticky .navbar .stime {
+  color: var(--white-color);
+}
+
+nav .navbar .menu {
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li {
+  list-style: none;
+  margin: 0 10px;
+}
+nav .navbar .menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black-color);
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover {
+  color: var(--primary-color);
+}
+nav.sticky .menu a {
+  color: var(--white-color);
+}
+nav.sticky .menu a:hover {
+  color: var(--black-color);
+}
+.navbar .media-icons a {
+  color: var(--primary-color);
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a {
+  color: var(--white-color);
+}
+
+/* Side Navigation */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: var(--white-color);
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn {
+  color: var(--primary-color);
+}
+nav.sticky .menu-btn {
+  color: var(--white-color);
+}
+.navbar .menu .menu-btn {
+  color: var(--white-color);
+}
+
+/* Homepage Styling */
+.homepage {
+  height: 100vh;
+  width: 100%;
+  background: url("../img/anim.gif") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.homepage .home-content {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage .greeting {
+  font-size: 25px;
+  color: var(--black-color);
+}
+.homepage .text-name {
+  color: var(--black-color);
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.homepage .text-jobs {
+  font-size: 40px;
+  margin: 5px 0;
+  color: var(--primary-color);
+}
+.homepage .text-city {
+  font-size: 23px;
+  margin: 5px 0;
+  color: var(--black-color);
+}
+.homepage .button {
+  margin: 14px 0;
+}
+.homepage .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.homepage .button button:hover {
+  border-color: var(--primary-color);
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+/* About Me Styling */
+section {
+  padding-top: 40px;
+}
+section .content {
+  width: 80%;
+  margin: 40px auto;
+  font-family: "Poppins", sans-serif;
+}
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span {
+  color: var(--black-color);
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--primary-color);
+  left: 0;
+  bottom: 0;
+}
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.aboutme .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutme .about-details .left {
+  width: 45%;
+}
+.aboutme .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.aboutme .about-details .right {
+  width: 55%;
+}
+section .topic {
+  color: var(--black-color);
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p {
+  text-align: justify;
+  color: var(--black-color);
+}
+section .button {
+  margin: 16px 0;
+}
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover {
+  border-color: var(--primary-color);
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+/* Education Styling */
+.education {
+  border-top: 3px solid var(--primary-color);
+  background-image: url("../img/texture2.jpg");
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.education .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.education .boxes .box {
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  border: 2px solid var(--primary-color);
+  background-color: #f0f8ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.education .boxes .box:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.education .boxes .box .icon {
+  height: 50px;
+  width: 50px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: var(--white-color);
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+.education .boxes .box:hover .topic,
+.education .boxes .box:hover p {
+  color: var(--white-color);
+  transition: all 0.4s ease;
+}
+
+/* Experience Styling*/
+.achivement h1 {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.achivement .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.achivement .boxes .box {
+  margin: 20px 0;
+  width: calc(100% / 2 - 20px);
+  text-align: center;
+  border: 5px solid var(--primary-color);
+  background-color: var(--white-color);
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.achivement .boxes .box:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.achivement .boxes .box img {
+  width: 20%;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+
+.achivement .boxes .box:hover .topic {
+  color: var(--white-color);
+  transition: all 0.4s ease;
+}
+
+.boxes .box:hover img {
+  width: 100%;
+  margin: 0px;
+  border: 2px solid var(--white-color);
+  border-radius: 10px;
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+/* Skill Styling*/
+.skills .content {
+  padding: 40px 0;
+}
+.skills .skills-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills-details .text {
+  width: 50%;
+}
+.skills-details p {
+  color: var(--black-color);
+  text-align: justify;
+}
+.skills .skills-details .experience {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num {
+  color: var(--black-color);
+  font-size: 80px;
+}
+.skills-details .experience .exp {
+  color: var(--black-color);
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box {
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic {
+  font-size: 20px;
+  color: var(--primary-color);
+}
+.skills-details .boxes .per {
+  font-size: 60px;
+  color: var(--primary-color);
+}
+
+/*Hobbies Styling */
+.hobbies {
+  border-top: 3px solid var(--primary-color);
+  background-image: url("../img/texture2.jpg");
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.hobbies .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.hobbies .boxes .box {
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid var(--primary-color);
+  background-color: #f0f8ff;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.hobbies .boxes .box:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.hobbies .boxes .box .icon {
+  height: 50px;
+  width: 50px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: var(--white-color);
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+.hobbies .boxes .box:hover .topic,
+.hobbies .boxes .box:hover p {
+  color: var(--white-color);
+  transition: all 0.4s ease;
+}
+
+/* Contact Me Styling */
+.contact {
+  background-image: url("../img/texture2.jpg");
+  border-top: 3px solid var(--primary-color);
+}
+
+.contact .content {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .text {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/*/////////////////////////////////////////////*/
+.contact-form {
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+form input,
+textarea {
+  padding: 12px;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: hsla(260, 100%, 44%, 0.1);
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+form input::placeholder,
+textarea::placeholder {
+  color: black;
+}
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.warning {
+  color: red;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  text-align: left;
+  font-size: 11px;
+}
+.contact-button {
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contact-button:hover {
+  background-color: rgb(18, 100, 182);
+}
+
+.button a i {
+  font-size: 50px;
+  color: var(--primary-color);
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.5s ease;
+}
+
+.button a :hover {
+  color: rgb(18, 100, 182);
+  font-size: 48px;
+  transition: all 0.5s ease;
+}
+
+/* Footer Styling */
+footer {
+  background: var(--primary-color);
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+footer .text span {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--white-color);
+}
+footer .text span a {
+  font-weight: 500;
+  color: var(--white-color);
+}
+footer .text span a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll Home Button Styling */
+.scroll-button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+  background: var(--primary-color);
+  padding: 10px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Multi Platform Size */
+@media (max-width: 1190px) {
+  .homepage {
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  section .content {
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: var(--primary-color);
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  .homepage {
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  .navbar.active .menu {
+    left: 0;
+  }
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    color: var(--white-color);
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover {
+    color: var(--black-color);
+  }
+  nav .navbar .media-icons {
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+
+  .aboutme .about-details {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .aboutme .about-details .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .aboutme .about-details .right {
+    width: 90%;
+    margin: 40px 0;
+  }
+  .hobbies .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+
+  .education .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+
+  .achivement .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+  nav .navbar .stime {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .homepage {
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: var(--primary-color);
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  .navbar.active .menu {
+    left: 0;
+  }
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    color: var(--white-color);
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover {
+    color: var(--black-color);
+  }
+  nav .navbar .media-icons {
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+  .aboutme .left img {
+    height: 350px;
+    width: 350px;
+  }
+  nav .navbar .stime {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  nav .navbar {
+    width: 90%;
+  }
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: var(--primary-color);
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  .navbar.active .menu {
+    left: 0;
+  }
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    color: var(--white-color);
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover {
+    color: var(--black-color);
+  }
+  nav .navbar .media-icons {
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+  nav .navbar .stime {
+    display: none;
+  }
+
+  .homepage {
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  .homepage .text-name {
+    font-size: 65px;
+  }
+  .homepage .text-jobs {
+    font-size: 35px;
+  }
+
+  .skills .skills-details {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hobbies .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .education .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .achivement .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .contact .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .homepage {
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  .homepage .text-name {
+    font-size: 55px;
+  }
+  .homepage .text-jobs {
+    font-size: 33px;
+  }
+  nav .navbar .stime {
+    display: none;
+  }
+
+  .skills-details .boxes .per {
+    font-size: 50px;
+    color: var(--primary-color);
+  }
+}
