@@ -812,18 +812,122 @@ footer .text span a:hover {
     background-repeat: no-repeat;
     background-position: left top;
   }
-  .homepage .text-name {
-    font-size: 55px;
+  nav .navbar .label a {
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--primary-color);
   }
-  .homepage .text-jobs {
-    font-size: 33px;
-  }
+
   nav .navbar .stime {
     display: none;
+  }
+
+  .homepage .greeting {
+    font-size: 25px;
+    color: var(--black-color);
+    text-align: center;
+  }
+
+  .homepage .button button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 400;
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+  }
+
+  .homepage .text-name {
+    color: var(--black-color);
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: -3px;
+    text-align: center;
+  }
+  .homepage .text-jobs {
+    font-size: 25px;
+    margin: 5px 0;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  .homepage .text-city {
+    font-size: 25px;
+    margin: 5px 0;
+    text-align: center;
+    color: var(--black-color);
+  }
+
+  section .title span {
+    color: var(--black-color);
+    font-size: 23px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
   }
 
   .skills-details .boxes .per {
     font-size: 50px;
     color: var(--primary-color);
+  }
+
+  .button a i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.5s ease;
+  }
+
+  .aboutme .left img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .boxes .box .topic {
+    font-size: 15px;
+  }
+
+  .boxes .box .per {
+    font-size: 40px;
+    margin-top: -20px;
+  }
+
+  .button a :hover {
+    color: rgb(18, 100, 182);
+    font-size: 38px;
+    transition: all 0.5s ease;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 14px;
+    color: var(--black-color);
+  }
+
+  section .topic {
+    color: var(--black-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  footer .text span {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--white-color);
+  }
+  footer .text span a {
+    font-weight: 500;
+    color: var(--white-color);
+  }
+  footer .text span a:hover {
+    text-decoration: underline;
   }
 }
